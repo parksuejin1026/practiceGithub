@@ -48,10 +48,28 @@ git branch 브랜치명 = 브랜치 생성해줌
 
 merge 사용전에는 main으로 반드시 이동하기! 중요!
 
-git remote add origin 내 저장소 주소
+1. 로컬 저장소에 원격 저장소 연결
+먼저, 로컬 저장소에게 "네가 파일을 보낼 곳은 여기야"라고 알려줘야 합니다. 이 때 git remote add 명령어를 사용합니다.
 
+Bash
+
+git remote add origin https://github.com/사용자이름/저장소이름.git
 git remote add: 로컬 저장소에 원격 저장소를 추가하는 명령어입니다.
 
 origin: 원격 저장소에 붙여주는 별칭입니다. 관습적으로 origin이라는 이름을 많이 사용합니다.
 
 https://...: 연결할 깃허브 저장소의 주소입니다. 깃허브 저장소 페이지의 'Code' 버튼을 누르면 이 주소를 복사할 수 있습니다.
+
+2. 커밋된 파일 푸시하기
+연결이 완료되면, 커밋해 놓은 파일들을 깃허브로 업로드할 수 있습니다.
+
+Bash
+
+git push -u origin main
+git push: 로컬의 변경사항을 원격 저장소에 올리는 명령어입니다.
+
+-u (또는 --set-upstream): 이 옵션을 사용하면 현재 로컬 브랜치(main)를 원격 저장소의 main 브랜치에 연결합니다. 이렇게 해두면 다음부터는 git push만 입력해도 자동으로 origin main에 푸시됩니다.
+
+origin main: origin이라는 별칭의 원격 저장소에 로컬의 main 브랜치 내용을 푸시하라는 뜻입니다.
+
+이 과정을 거치면 로컬에서 커밋해놓은 파일들이 깃허브 저장소에 성공적으로 업로드될 것입니다.
