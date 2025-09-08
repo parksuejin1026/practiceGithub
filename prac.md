@@ -28,3 +28,19 @@ commit은 대놓고 있음
 커밋을 작성할 때 전거랑 뭐가 달라졌는지 쓰면 굿
 
 git diff = 최근 commit vs 현재파일의 차이점을 보여줌 q를 누르면 보기 종료
+
+git difftool = 좀 더 좋은 diff 기능 (UI/UX 더 좋음)
+
+git difftool 커밋아이디 = 현재파일 vs 특정커밋 비교가능
+커밋 아이디 = log --oneline --all 을 사용했을 때 제일 앞에 나오는 아이디 (2개까지 쓸 수 있고 2개쓰면 적은 2개 비교 가능)
+
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'를 사용하면 difftool 할 때 vim에디터가 안나옴 (근데git difftool도 잘 안써서) 확장자에서 git 검색하면 여러가지 부가기능 존재 (git graph 사용 ㄱㄱ편함)
+
+기존 코드에 새로운 기능을 추가하고 싶을때는 복사본을 만들어서 시작해라
+
+branch 기능을 이용하면 복사본 만들기 쉬움
+
+git branch 브랜치명 = 브랜치 생성해줌
+
+git switch 브랜치명 = 브랜치로 이동
