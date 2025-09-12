@@ -68,4 +68,6 @@ git push: 로컬의 변경사항을 원격 저장소에 올리는 명령어입�
 
 origin main: origin이라는 별칭의 원격 저장소에 로컬의 main 브랜치 내용을 푸시하라는 뜻입니다.
 
+git pull origin main --allow-unrelated-histories // pull 해도 안될때 해결해주는 무적 코드
+
 이 과정을 거치면 로컬에서 커밋해놓은 파일들이 깃허브 저장소에 성공적으로 업로드될 것입니다.
